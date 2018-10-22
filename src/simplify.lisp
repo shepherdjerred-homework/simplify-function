@@ -25,7 +25,14 @@
     (if
       (null (cdr reduction))
       (car reduction)
-      reduction-result)))
+      (list-to-atom reduction-result))))
+
+(defun list-to-atom
+  (l)
+  (if
+    (null (cdr l))
+    (car l)
+    l))
 
 (defun not-equal
   (l r)
@@ -65,7 +72,7 @@
           (if
             (equal term-after-reduction new-term)
             new-term
-            (simplify-term new-term reductions)))))))
+              (simplify-term new-term reductions)))))))
 
 (defun simplify
   (term reductions)

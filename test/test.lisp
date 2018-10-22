@@ -16,7 +16,7 @@
             ((/ (* y x) x) y)
             ((* x 0) 0)
             ((* 0 x) 0))))
-      
+
 (and
     (equal
         (simplify
