@@ -1,3 +1,6 @@
+; simplify
+; Jerred Shepherd
+
 ; match     = ((X . A))
 ; reduction = ((+ X 0) (X))
 ; term      = (+ A 0)
