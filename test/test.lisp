@@ -1,11 +1,13 @@
 (progn
     (load "../src/match.lisp")
     (load "../src/simplify.lisp")
-    (trace simplify)
-    (trace simplify-term)
-    (trace match)
-    (trace find-matching-reduction)
-    (trace apply-reduction)
+    ; (trace simplify)
+    ; (trace simplify-term)
+    ; (trace match)
+    ; (trace find-matching-reduction)
+    ; (trace apply-reduction)
+    ; (trace apply-match)
+    ; (trace apply-matches)
     (setq r
         '(
             ((+ x (- x)) 0)
@@ -16,6 +18,8 @@
             ((/ (* y x) x) y)
             ((* x 0) 0)
             ((* 0 x) 0))))
+
+(load "doit.lisp")
 
 (and
     (equal
